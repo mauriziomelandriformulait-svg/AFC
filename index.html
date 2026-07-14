@@ -11,11 +11,35 @@
 
         .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 15px; width: 100%; max-width: 1200px; }
         
-        .map-card { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; border-top: 6px solid #FFCC00; cursor: pointer; text-align: center; }
-        .map-card:hover { transform: translateY(-5px); border-color: #eab308; }
+        .map-card { 
+            background: white; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 12px; 
+            padding: 20px 10px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 10px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            transition: transform 0.2s; 
+            /* Bordo giallo spesso in basso */
+            border-bottom: 6px solid #FFCC00; 
+            cursor: pointer; 
+            text-align: center; 
+            height: 140px; 
+        }
+        .map-card:hover { transform: translateY(-5px); border-bottom-color: #eab308; }
         
-        .icon { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 1.5; }
-        .label { font-size: 13px; font-weight: 600; line-height: 1.2; }
+        .icon { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 1.5; margin-top: auto; }
+        
+        .label { 
+            font-size: 13px; 
+            font-weight: 700; /* Carattere bold */
+            line-height: 1.2; 
+            padding-top: 5px;
+            /* Linea separatrice rimossa */
+        }
         
         @media (max-width: 1000px) { .grid { grid-template-columns: repeat(3, 1fr); } }
     </style>
